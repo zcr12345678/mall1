@@ -14,11 +14,14 @@ export default {
   },
   data(){
     return{
-     
+     res:{}
     }
   },
   mounted(){
-   
+   this.axios.get('/mock/user/login.json').then((res)=>{
+   this.res=res;
+
+   });
   }
 }
 </script>
