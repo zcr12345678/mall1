@@ -7,8 +7,9 @@ import Detail from './pages/detail'
 import Cart from './pages/cart'
 import Order from './pages/order'
 import OrderConfirm from './pages/orderConfirm'
-import OrderList from './pages/OrderList'
-import OrderorderPay from './pages/orderPay'
+import OrderList from './pages/orderList'
+import OrderPay from './pages/orderPay'
+import AliPay from './pages/alipay'
 Vue.use(Router);
 
 export default new  Router({
@@ -16,6 +17,7 @@ routes:[{
     path:'/',
     name:'home',
     component:Home,
+    redirect:'/index',
     children:[
         {
         path:'/index',
@@ -41,18 +43,22 @@ routes:[{
     component:Order,
     children:[
         {
-            path:'/list',
+            path:'list',
             name:'order-list',
             component:OrderList,
-    },{
-        path:'/confirm',
+        },{
+        path:'confirm',
         name:'order-confirm',
         component:OrderConfirm,
-},{
-    path:'/pay',
-    name:'order-pay',
-    component:OrderPay,
-},
+        },{
+        path:'pay',
+        name:'order-pay',
+        component:OrderPay,
+        },{
+            path:'alipay',
+            name:'alipay',
+            component:AliPay,
+            }
 ]
 },
 ]

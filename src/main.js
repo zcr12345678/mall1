@@ -3,8 +3,11 @@ import router from './router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import App from './App.vue'
-//根据前端的跨域方式做调整
-axios.defaults.baseURL='/api';
+const mock = true;
+if(mock){
+  require('./mock/api');
+}
+axios.defaults.baseURL='api';
 axios.defaults.timeout=8000;
 //接口错误拦截
 axios.interceptors.response.use(function(response){
