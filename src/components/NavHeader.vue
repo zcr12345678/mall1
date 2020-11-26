@@ -54,18 +54,18 @@ export default {
     @import './../assets/scss/base.scss';
     @import './../assets/scss/mixin.scss';
    .header{
-      .nav-topbar{
+        .nav-topbar{
              height:39px;
              line-height: 39px;
              background-color:#333333 ;
              color: #B0B0B0;
            .container{
                  @include flex();
-           a{
+                 a{
                  display: inline-block;
                  color:  #B0B0B0;
                  margin-right: 17px;
-           }
+                 }
            .my-cart{
                  width: 110px;
                  background-color: #FF6600;
@@ -79,7 +79,7 @@ export default {
                  }
            }
            } 
-      }
+        }
        .nav-header{
           .container{
               height: 112px;
@@ -122,15 +122,13 @@ export default {
                      span{
                          cursor: pointer;
                      }
-                     &:hover{
-
-                     }
+                     
                  }
              }
             .header-search{
                 width:319px;
                 .wrapper{
-                    heigth:50px;
+                    height:50px;
                     border:1px solid #E0E0E0;
                     display: flex;
                     align-items: center;
@@ -144,16 +142,16 @@ export default {
                     }
                     a{
                          @include bgImg(18px,18px,'/imgs/icon-search.png')
-                        margin-left: 17px;
+                         margin-left: 17px;
 
-                    }
+                     }
                 }
 
             }
 
           }
-
-       }
+    }
+    
     }
 
 </style>
